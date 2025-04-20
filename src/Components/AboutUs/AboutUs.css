@@ -1,0 +1,102 @@
+.about-us-page {
+    padding: 3rem;
+    background: linear-gradient(to bottom, #1a1154, #2e2c64); /* Subtle gradient background */
+    color: #ffffff; /* Light text for better contrast */
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  .about-us-page h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: white; /* Soft lavender color for the title */
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .about-content p {
+    font-size: 1.3rem;
+    color: white; /* Softer text for readability */
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .about-team {
+    margin-top: 4rem;
+  }
+  
+  .about-team h2 {
+    font-size: 2.5rem;
+    color: white; /* Vibrant coral for section headers */
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Responsive wrapping for smaller screens */
+    gap: 2.5rem;
+  }
+  
+  .team-member {
+    text-align: center;
+    background: #2e1e75; /* Slightly darker card background for contrast */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px); /* Subtle hover lift */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6); /* Enhanced hover shadow */
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 4px solid #6544c9; /* Add a border around images to match the theme */
+    width: 120px;
+    height: 120px;
+  }
+  
+  .team-member h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    color: white; /* Bright warm color for names */
+    font-weight: bold;
+  }
+  
+  .team-member p {
+    font-size: 1.1rem;
+    color: #c5b9e6; /* Softer text color for role descriptions */
+  }
+  
+  /* Add responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .about-content p {
+      font-size: 1.1rem;
+    }
+  
+    .about-team h2 {
+      font-size: 2rem;
+    }
+  
+    .team-member {
+      padding: 1.5rem;
+    }
+  
+    .team-member img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .team-member h3 {
+      font-size: 1.4rem;
+    }
+  }

@@ -1,0 +1,78 @@
+.scorecard-container {
+    text-align: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background-color: #918cb1;
+    color: #19029c;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.scorecard-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Match List */
+.scorecard-matches {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #dcdcdc;
+
+    padding-bottom: 20px;
+}
+
+/* Match Card */
+.scorecard-match-card {
+    width: 90%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    border-left: 6px solid #ffcc00;
+    box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.2);
+    color: #19029c;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Default View (Teams & Runs Only) */
+.scorecard-match-summary {
+    font-size: 18px;
+    font-weight: bold;
+    color: #19029c;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hide Match Details Initially */
+.match-details {
+    display: none;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #19029c;
+}
+
+/* Show Details on Hover */
+.scorecard-match-card:hover {
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+.scorecard-match-card:hover .match-details {
+    display: block;
+}

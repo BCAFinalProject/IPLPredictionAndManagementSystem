@@ -1,0 +1,150 @@
+/* Main Container */
+.get-started-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #1a1a1d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Background Cards */
+.background-cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.getcard {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  animation: float 15s ease-in-out infinite; /* Slower transition (increased to 15s) */
+}
+
+.getcard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Slower Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* Floating effect */
+  }
+}
+
+/* Content Wrapper (Transparent Box) */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent box with stronger contrast */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  backdrop-filter: blur(10px); /* Adds a blur effect behind the content */
+  width: 80%; /* Slightly smaller content box */
+  max-width: 600px;
+  animation: slideIn 1s ease-out; /* Animation to slide in the content */
+}
+
+/* Content Box Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headline (More Attractive) */
+.headline {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #dcc96c; /* Gold color for prominence */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Glow effect */
+}
+
+/* Subheadline Styling */
+.subheadline {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #f2f3eb;
+  font-style: italic;
+}
+
+/* Call-to-Action Buttons (Smaller with Fixed Width) */
+.cta-buttons {
+  display: flex;
+  flex-direction: row; /* Align buttons side by side */
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 20px; /* Space between buttons */
+}
+
+.signup-btn,
+.login-btn {
+  width: 150px;  /* Fixed button width */
+  padding: 8px 16px;  /* Smaller padding */
+  font-size: 1rem;  /* Smaller font size */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.signup-btn:hover {
+  transform: scale(1.05);
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .content {
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .headline {
+    font-size: 2rem;
+  }
+
+  .cta-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

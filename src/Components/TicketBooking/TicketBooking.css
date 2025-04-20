@@ -1,0 +1,166 @@
+
+
+
+
+
+
+
+/* Responsive Container */
+.ticket-container {
+    max-width: 90%;
+    max-width: 600px;
+    max-height: 700px;
+    margin: 40px auto;
+    background: #1c1c1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/* Title Styling */
+.match-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f39c12;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+.form-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    color: #f1f1f1;
+}
+
+.form-group select, 
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #2c2c2e;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.form-group select:hover, 
+.form-group input:hover,
+.form-group select:focus,
+.form-group input:focus {
+    background: #3c3c3e;
+    outline: none;
+}
+
+/* Seat Selection */
+.seat-title {
+    margin: 20px 0 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+/* Centering the Seat Grid */
+.seat-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Grid Styling */
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(42px, 1fr));
+    gap: 8px;
+    justify-content: center;
+    max-width: 100%;
+    padding: 10px;
+}
+
+/* Seat Styling */
+.seat {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: #444;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid transparent;
+}
+
+.seat:hover {
+    background: #666;
+    transform: scale(1.1);
+}
+
+/* Booked Seat Styling */
+.seat.booked {
+    background: #e74c3c !important; /* Red color for booked seats */
+    color: white !important;
+    cursor: not-allowed;
+    pointer-events: none; /* Disable clicking */
+}
+
+/* Selected Seat Styling */
+.seat.selected {
+    background: #f39c12 !important; /* Orange color for selected seats */
+    color: black !important;
+    font-weight: bold;
+    transform: scale(1.1);
+    border: 2px solid #fff;
+}
+
+
+/* Proceed Button */
+.proceed-button {
+    margin-top: 20px;
+    padding: 14px 22px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #f39c12;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.proceed-button:hover {
+    background: #e67e22;
+    transform: scale(1.05);
+}
+
+/* Responsive Fixes */
+@media (max-width: 500px) {
+    .seat {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+    
+    .ticket-container {
+        padding: 20px;
+    }
+    
+    .proceed-button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,339 @@
+/* Overall Container */
+.head-to-head-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background: url('../Images/bg6.jpg') no-repeat center center fixed; /* Update this path */
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5); /* Fallback background color */
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  color: #fff;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideInFromTop 0.8s ease-in-out; /* Slide-in effect */
+  width: 98%;
+}
+
+.header-section .ipl-logo {
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header-section .navigation a {
+  color: #fff;
+  margin: 0 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.header-section .navigation a:hover {
+  text-decoration: underline;
+  color: #dfa279;
+  animation: bounce 0.5s ease; /* Bounce effect on hover */
+}
+
+/* Type Toggle Section */
+.type-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.toggle-button {
+  margin: 0 15px;
+  padding: 14px 24px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid rgb(221, 187, 125);;
+  cursor: pointer;
+  border-radius: 40px;
+  background-color: #ffffff;
+  color: #003366;
+  transition: all 0.3s ease;
+}
+
+.toggle-button.active {
+  background-color: #1e3d73;
+  color: white;
+}
+
+.toggle-button:hover {
+  background-color: #005b99;
+  color: white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Space between the card and VS sign */
+  margin-top: 40px;
+  animation: slideInFromLeft 1s ease-out;
+  background-color: #24324b;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+.card-wrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.vs-sign {
+  font-size: 30px;
+  font-weight: bold;
+  color:rgb(221, 187, 125); /* Golden color for contrast */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  margin: 0 20px; /* Add space between cards and the VS sign */
+  animation: bounce 0.5s infinite alternate; /* Subtle bouncing animation */
+}
+
+/* Card Styling */
+.selection-card {
+  border: 2px solid #ddd;
+  padding: 25px;
+  width: 240px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+  background-color: #3d4b6c; /* Blue-gray background */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+.selection-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Enhanced hover shadow */
+}
+
+/* Image Container */
+.card-image-container {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4a586d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  color: rgb(221, 187, 125);;
+  padding: 5%;
+}
+
+/* Card Name */
+.card-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(221, 187, 125);;
+  margin-bottom: 15px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Plus Icon */
+.card-icon {
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(221, 187, 125);;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card-icon:hover {
+  transform: scale(1.2);
+  color: rgb(221, 187, 125);;
+}
+
+.plus-icon {
+  font-size: 50px;
+  color: rgb(221, 187, 125); width: 110px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d3644;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Dropdown Styling */
+.head-dropdown {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid rgb(221, 187, 125);;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 250px;
+  overflow-y: auto;
+  border-radius: 5px;
+  width: 250px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.head-dropdown ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.head-dropdown ul li {
+  padding: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  background-color: rgb(221, 187, 125);
+}
+
+.head-dropdown ul li:hover {
+  background-color: #3d4b6c;
+}
+
+.head-dropdown ul li img {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+/* Stats Table */
+/* Stats Table */
+.head-stats-table {
+  margin-top: 50px;
+  width: 90%; /* Increased width for a more prominent display */
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  border-radius: 12px;
+  overflow: hidden; /* To ensure rounded corners work with overflow */
+  background: linear-gradient(145deg, #f3e7d9, #e8d5bc); /* Subtle gradient background */
+}
+
+/* Header Row */
+.head-stats-table th {
+  background: linear-gradient(145deg, #3d4b6c, #2b3349); /* Gradient for richness */
+  color: white;
+  text-transform: uppercase; /* Makes text more pronounced */
+  letter-spacing: 1px;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Data Cells */
+.head-stats-table td {
+  background: rgb(250, 232, 202); /* Soft beige for a modern look */
+  color: #333;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover Effect */
+.head-stats-table td:hover {
+  background: rgb(221, 187, 125); /* Warm golden highlight */
+  transform: scale(1.02); /* Slight zoom effect */
+  color: #fff; /* Text color changes for contrast */
+}
+
+/* Row Highlighting */
+.head-stats-table tr:nth-child(even) td {
+  background: rgb(245, 223, 193); /* Slightly different tone for alternating rows */
+}
+
+/* Table Border */
+.head-stats-table th, .head-stats-table td {
+  border: 1px solid #ddd;
+}
+
+/* Table Caption */
+.head-stats-table caption {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3d4b6c;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#sel{
+  background-color: wheat; /* Light gray background color */
+  border: 2px solid #24324b; /* Blue border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font style */
+  font-size: 18px; /* Text size */
+  color: #333; /* Text color */
+  margin: 20px auto; /* Center the box horizontally and vertically */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation */
+  
+}
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

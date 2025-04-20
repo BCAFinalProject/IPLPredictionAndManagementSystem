@@ -1,0 +1,104 @@
+.contact-us-page {
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1154; /* Updated background color */
+    color: #ffffff; /* Light text color for better contrast */
+    min-height: 100vh;
+  }
+  
+  .contact-us-page h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 36px;
+  }
+  
+  .contact-us-page p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #d1c4e9;
+    font-size: 18px;
+  }
+  
+  .contact-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(17, 9, 9, 0.273); /* Slightly darker card background for contrast */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow effect */
+  }
+  
+  .contact-us-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact-us-form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: white; /* Softer label color */
+  }
+  
+  .contact-us-form input,
+  .contact-us-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #6544c9; /* Input border matching the theme */
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: rgba(17, 9, 9, 0.273); /* Input background */
+    color: #ffffff; /* Input text color */
+    margin-top: 8px;
+  }
+  
+  .contact-us-form input:focus,
+  .contact-us-form textarea:focus {
+    border-color: #9a6cff; /* Highlighted input border */
+    outline: none;
+    box-shadow: 0 0 5px #9a6cff; /* Glowing focus effect */
+  }
+  
+  .contact-us-form .submit-btn {
+    background-color: #6544c9; /* Button background matching theme */
+    color: #ffffff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contact-us-form .submit-btn:hover {
+    background-color: #9a6cff; /* Lighter hover effect */
+    transform: translateY(-2px); /* Subtle hover lift */
+  }
+  
+  .error {
+    color: #ff6b6b; /* Bright red for errors */
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  
+  .success-message {
+    color: #42f590; /* Bright green for success */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Add some spacing for mobile screens */
+  @media (max-width: 600px) {
+    .contact-form-container {
+      padding: 20px;
+    }
+    .contact-us-page h1 {
+      font-size: 28px;
+    }
+    .contact-us-page p {
+      font-size: 16px;
+    }
+  }

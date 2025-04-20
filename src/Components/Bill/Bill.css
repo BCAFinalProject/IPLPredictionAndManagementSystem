@@ -1,0 +1,148 @@
+/* Bill Container */
+.bill-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #130b3c;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading */
+.bill-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Empty Bill Message */
+.empty-bill {
+  font-size: 18px;
+  color: #7f8c8d;
+  margin-top: 20px;
+}
+
+/* Bill Details Section */
+.bill-details {
+  margin-top: 20px;
+}
+
+/* Individual Bill Item */
+.bill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f9fc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: 0.3s ease-in-out;
+}
+
+.bill-item:hover {
+  background: #ecf0f1;
+}
+
+/* Product Image */
+.bill-item-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #bdc3c7;
+}
+
+/* Product Details */
+.bill-item-details {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.bill-item-details h3 {
+  font-size: 20px;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+.bill-item-details p {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+/* Total Price */
+.bill-item-total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* Grand Total */
+.total-bill {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d35400;
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 2px solid #d35400;
+}
+
+/* Buttons */
+.confirm-btn,
+.back-btn {
+  font-size: 18px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Confirm Button */
+.confirm-btn {
+  background: #2980b9;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background: #1f618d;
+}
+
+/* Back Button */
+.back-btn {
+  background: #3a2c7e;
+  color: white;
+}
+
+.back-btn:hover {
+  background: #3a2c7e;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .bill-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .bill-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bill-item-img {
+    margin-bottom: 10px;
+  }
+
+  .bill-item-details {
+    text-align: center;
+  }
+}

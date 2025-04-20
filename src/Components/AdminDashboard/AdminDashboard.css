@@ -1,0 +1,186 @@
+/* Admin Dashboard Styling */
+.admin-container {
+  font-family: 'Poppins', sans-serif;
+  background: rgb(117, 117, 228); /* Changed to black */
+  color: #ffffff;
+  min-height: 100vh;
+  padding-bottom: 30px;
+}
+
+/* Header */
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.911);
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.admin-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.admin-ipl-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.admin-welcome {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Banner */
+.admin-banner {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.admin-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+/* Dashboard Content */
+.admin-dashboard-main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.admin-dashboard-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.admin-dashboard-subtext {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 30px;
+}
+
+/* Admin Sections */
+.admin-section {
+  background: rgba(255, 255, 255, 0.1); /* Dark transparent */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Section Titles */
+.admin-section-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  text-align: center;
+}
+
+/* User Management Table */
+.admin-user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.admin-user-table th, .admin-user-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: black;
+  text-align: center;
+}
+
+.admin-user-table th {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+  color: white;
+}
+
+.admin-user-table tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.admin-remove-btn, .admin-delete-comment {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.admin-remove-btn:hover, .admin-delete-comment:hover {
+  background: #cc0000;
+}
+
+/* Comments Section */
+.admin-comments-list {
+  list-style: none;
+  padding: 0;
+  color:#f9f5f5;
+  background-color: rgb(20, 14, 84);
+
+}
+
+.admin-comment-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: #cc0000;
+  align-items: center;
+}
+
+.admin-comment-username {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.admin-comment-content {
+  flex-grow: 1;
+  margin: 0 15px;
+  background-color: black;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-dashboard-title {
+    font-size: 1.8rem;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .admin-ipl-logo {
+    margin-bottom: 10px;
+  }
+
+  .admin-comment-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .admin-comment-content {
+    margin: 10px 0;
+  }
+
+  .admin-remove-btn, .admin-delete-comment {
+    width: 100%;
+  }
+}

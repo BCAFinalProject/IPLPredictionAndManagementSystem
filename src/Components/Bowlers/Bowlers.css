@@ -1,0 +1,219 @@
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366; /* Dark blue */
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideInFromTop 0.8s ease-in-out; /* Slide-in effect */
+  }
+  
+  .home-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-logo-img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50%; /* Optional for a circular logo */
+  }
+  
+  .home-nav {
+    display: flex;
+    gap: 20px; /* Space between navigation items */
+  }
+  
+  .home-nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth hover effect */
+    position: relative; /* For hover underline effect */
+  }
+  
+  .home-nav-link:hover {
+    color: #dfa279; /* Gold accent */
+  }
+  
+  .home-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #dfa279; /* Gold accent underline */
+    transition: width 0.3s ease;
+  }
+  
+  .home-nav-link:hover::after {
+    width: 100%; /* Full-width underline on hover */
+  }
+  
+  /* Dropdown Menu Styling */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003366; /* Dark blue */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #005b99; /* Lighter blue on hover */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+  }
+  
+
+
+/* Container for the entire bowlers section */
+.bowlers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    background-color:  #efeef3
+    
+  }
+  
+  .search-bar {
+    width: 20px; /* Set the width to be small */
+    padding: 0px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out; /* Smooth transition for effects */
+    outline: none;
+  }
+  
+  .search-bar:focus {
+    border-color: #4CAF50; /* Change border color when focused */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Add glow effect on focus */
+  }
+  
+  .search-bar::placeholder {
+    color: #888; /* Light gray placeholder text */
+  }
+  
+  /* List of bowlers displayed in a flex layout */
+  .bowlers-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* space between the cards */
+  }
+  
+  /* Individual bowler card layout */
+  .bowler-card {
+    width: 222px;
+    height: 380px; /* Adjust the height to fit both the image and description */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:  #1a1154;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure no overflow outside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for the bowler card */
+  .bowler-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Image styling to ensure it fits the container */
+  .bowler-card img {
+    width: 100%; /* Ensures the image stretches to the container width */
+    height: 250px; /* Adjust the height to match the container */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 8px; /* Keeps the rounded corners */
+    display: block; /* Fixes extra spacing around the image */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Highlight selected bowler card with a blue border and glow effect */
+  .bowler-card.selected {
+    border: 3px solid #007bff; /* Blue border when selected */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); /* Glow effect */
+    transform: scale(1.05); /* Slight zoom for selection */
+  }
+  
+  /* Info section (name and achievements) */
+  .bowler-info {
+    margin-top: 10px;
+  }
+  
+  /* Styling for the name and achievements */
+  .bowler-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .bowler-info p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Error and success messages */
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .success-message {
+    color: green;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Submit button */
+  .submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

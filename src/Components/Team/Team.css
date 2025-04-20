@@ -1,0 +1,180 @@
+/* Teams Page */
+.teams-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #0d1352;
+  color: antiquewhite;
+  display: flex;
+  text-decoration: none;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Teams Grid */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 containers per row */
+  gap: 30px; /* Space between containers */
+  padding: 20px;
+  width: 90%; /* Increased width */
+  max-width: 1400px; /* Allows more space */
+  margin: auto;
+  justify-content: center;
+  text-decoration: none;
+
+  align-items: stretch; /* Ensures uniform height */
+}
+
+/* Team Card */
+.team-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px); /* Blurred Glass Effect */
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  min-height: 280px; /* Ensures uniform height */
+  width: 100%; /* All cards have the same width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+
+  align-items: center;
+  border: 2px solid transparent; /* Default state */
+}
+
+/* Make all cards the same height */
+.team-card > * {
+  flex-grow: 1;
+}
+
+/* Hover Effect */
+.team-card:hover {
+  transform: translateY(-8px) scale(1.05); /* Slight Lift */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Glowing border effect */
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+/* Team Logo */
+.team-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  padding: 5px;
+  background: white;
+  object-fit: cover;
+}
+
+/* Team Name */
+.team-name {
+  font-size: 24px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Team Details */
+.team-details {
+  font-size: 16px;
+  color: antiquewhite;
+  text-decoration: none;
+
+  text-align: center;
+}
+
+/* Trophy Hover Effect - Fix color visibility */
+.trophy-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.9); /* Change background to light */
+  color: #0d1352; /* Dark text for contrast */
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: translateY(10px); /* Initially hidden */
+}
+
+/* Show Hover Content */
+.team-card:hover .trophy-hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+/* Animated Glow Effect */
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.4); }
+  50% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); }
+  100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.4); }
+}
+
+/* Apply Glow Effect */
+.team-card:hover {
+  animation: glow 1s infinite alternate;
+}
+
+
+/* Center-align last row with 2 cards */
+.teams-grid:has(.team-card:nth-last-child(2):first-child),
+.teams-grid:has(.team-card:nth-last-child(1):nth-child(2)) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Adjust for tablets */
+  .teams-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  }
+}
+
+@media (max-width: 768px) { /* Adjust for mobile */
+  .teams-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+
+  .team-card {
+    padding: 15px;
+    min-height: 250px; /* Adjusted for mobile */
+  }
+
+  .team-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-name {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) { /* Small screens */
+  .teams-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 per row */
+  }
+}

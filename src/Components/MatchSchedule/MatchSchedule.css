@@ -1,0 +1,98 @@
+/* Background Styling */
+.match-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b); /* Dark Gradient */
+    min-height: 100vh;
+  }
+  
+  /* Match Card */
+  .match-card {
+    width: 90%;
+    max-width: 550px;
+    background: #1e293b; /* Dark Blue */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .match-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Match Info */
+  .match-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .match-number {
+    font-size: 14px;
+    font-weight: bold;
+    color: #facc15; /* Yellow */
+  }
+  
+  .match-date,
+  .match-time,
+  .venue {
+    font-size: 16px;
+    color: #d1d5db; /* Light Gray */
+  }
+  
+  /* Teams Section */
+  .teams {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .team-name {
+    color: #facc15; /* Yellow */
+    font-size: 20px;
+  }
+  
+  .vs {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ef4444; /* Red */
+  }
+  
+  /* Book Tickets Button */
+  .book-tickets-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #facc15; /* Yellow */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  .book-tickets-btn:hover {
+    background: #eab308; /* Darker Yellow */
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .match-card {
+      width: 95%;
+      padding: 15px;
+    }
+  }
+  

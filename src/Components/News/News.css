@@ -1,0 +1,128 @@
+/* General Page Layout */
+.news-page {
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1154;  /* Updated background color */
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: background-color 0.5s ease;
+}
+
+.news-page:hover {
+    background-color: #251f7b; /* Subtle background color change on hover */
+}
+
+.news-page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Title shadow for better readability */
+    transition: all 0.3s ease;
+}
+
+.news-page-title:hover {
+    color: #f39c12; /* Hover color for title */
+    transform: translateY(-5px); /* Slightly lift the title */
+}
+
+/* News Container */
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: grid-template-columns 0.3s ease;
+}
+
+/* Each News Item Card */
+.news-item {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    filter: brightness(0.95); /* Slightly darken the item */
+}
+
+.news-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    filter: brightness(1); /* Return to normal brightness on hover */
+}
+
+/* News Image Styling */
+.news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover .news-image {
+    transform: scale(1.05); /* Slight zoom effect on image on hover */
+}
+
+/* Title Styling */
+.news-title {
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    line-clamp: 2; /* Standard property for line-clamping */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+
+.news-title:hover {
+    color: #f39c12; /* Hover color for title */
+    transform: translateY(-3px); /* Lift the title slightly */
+}
+
+/* Title Links */
+.news-title a {
+    text-decoration: none;
+    color: #1a1154; /* Link Color */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.news-title a:hover {
+    color: rgb(188, 12, 12); /* Hover color */
+    text-decoration: underline;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+
+    .news-page-title {
+        font-size: 2rem; /* Adjust title size on smaller screens */
+    }
+
+    .news-item {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,202 @@
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366; /* Dark blue */
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideInFromTop 0.8s ease-in-out; /* Slide-in effect */
+}
+
+.home-logo {
+  display: flex;
+  align-items: center;
+}
+
+.home-logo-img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 50%; /* Optional for a circular logo */
+}
+
+.home-nav {
+  display: flex;
+  gap: 20px; /* Space between navigation items */
+}
+
+.home-nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease; /* Smooth hover effect */
+  position: relative; /* For hover underline effect */
+}
+
+.home-nav-link:hover {
+  color: #dfa279; /* Gold accent */
+}
+
+.home-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #dfa279; /* Gold accent underline */
+  transition: width 0.3s ease;
+}
+
+.home-nav-link:hover::after {
+  width: 100%; /* Full-width underline on hover */
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #003366; /* Dark blue */
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #005b99; /* Lighter blue on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+.allrounders-container {
+  padding: 20px;
+  background-color:  #1a1154;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 40%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: green;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.allrounders-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 players per row */
+  gap: 20px;
+  justify-items: center;
+}
+
+.allrounder-card {
+  width: 222px;
+  height: 380px; /* Adjust the height to fit both the image and description */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:  #1a1154;
+  border-radius: 8px;
+  overflow: hidden; /* Ensure no overflow outside the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.allrounder-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.allrounder-card.selected {
+  border: 3px solid #1e90ff; /* IPL blue selection border */
+}
+
+.allrounder-card img {
+  width: 100%; /* Ensures the image stretches to the container width */
+  height: 250px; /* Adjust the height to match the container */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  border-radius: 8px; /* Keeps the rounded corners */
+  display: block; /* Fixes extra spacing around the image */
+  transition: all 0.3s ease-in-out;
+}
+
+.allrounder-info {
+  margin-top: 10px;
+}
+
+.allrounder-info h3 {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.allrounder-info p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.submit-button {
+  margin-top: 20px;
+  background-color: #1e90ff; /* IPL blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #155fa0; /* Darker blue on hover */
+}

@@ -1,0 +1,99 @@
+/* General Styling */
+.payment-container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #130b3c;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.payment-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Input Fields */
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-form input,
+.payment-form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.payment-form input:focus,
+.payment-form select:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Card Details */
+.card-details {
+  display: flex;
+  gap: 10px;
+}
+
+.card-details input {
+  width: 48%;
+}
+
+/* Pay Button */
+.pay-btn {
+  background: #5c4ab9;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background: #6a59bb;
+}
+
+/* Back Button */
+.back-btn {
+  background: #43358b;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.back-btn:hover {
+  background: #23156d;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .payment-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .card-details {
+    flex-direction: column;
+  }
+
+  .card-details input {
+    width: 100%;
+  }
+}

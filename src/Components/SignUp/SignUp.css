@@ -1,0 +1,140 @@
+/* Specific styling for the signup page */
+.signup-page {
+    margin: 0;
+    padding: 0;
+    background: url('../Images/bg1.jpg') no-repeat center center/cover; /* Background specific to signup page */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+/* Signup container styling */
+.signup-container {
+    width: 500px; /* Adjust the container width */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 50px rgba(0, 0, 0, 0.5); /* Darker shadow for visibility */
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    background: rgba(0, 0, 0, 0.7); /* Rich black background with transparency */
+    color: #fff; /* White text inside the container */
+    z-index: 1;
+    display: flex;
+    flex-direction: column; /* Align form elements vertically */
+    justify-content: space-between; /* Distribute space between elements */
+    min-height: 400px; /* Minimum height to ensure medium size */
+    max-height: 1000px; /* Set a maximum height */
+    overflow: hidden; /* Hide overflow to maintain consistent design */
+}
+
+/* Heading styles */
+h2 {
+    text-align: center;
+    color: #ffffff; /* White color for heading */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Form container styling */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow the form to expand and fill the available space */
+}
+
+/* Form field styling */
+.form-field {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Label styling */
+label {
+    font-size: 16px;
+    font-weight: 700; /* Bold labels for better visibility */
+    color: #fff; /* White text for labels */
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input fields and button styling */
+input[type="text"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc; /* Lighter border color */
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    background: #444; /* Dark background for input fields */
+    color: #fff; /* White text inside the fields */
+}
+
+/* Focused input field styling */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #3b8e8c; /* IPL-related blue color on focus */
+    box-shadow: 0 0 5px rgba(59, 142, 140, 0.4); /* Blue focus effect */
+}
+
+/* Checkbox field alignment */
+.checkbox-field {
+    display: flex;
+    align-items: flex-start; /* Align label to the checkbox */
+    font-size: 14px;
+    gap: 10px; /* Add spacing between checkbox and label */
+}
+
+.checkbox-field input[type="checkbox"] {
+    margin-top: 2px; /* Adjust checkbox alignment */
+}
+
+.checkbox-field label {
+    color: #fff; /* White text for checkbox label */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Signup button styling */
+button.signup-btn {
+    background: #2f3ab9; /* IPL-related blue color for button */
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+button.signup-btn:hover {
+    background: #2c369e; /* Slightly darker blue for hover effect */
+    transform: translateY(-2px);
+}
+
+/* Error message styling */
+.error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in effect for error messages */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

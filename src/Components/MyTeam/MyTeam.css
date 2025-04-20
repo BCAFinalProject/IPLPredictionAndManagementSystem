@@ -1,0 +1,136 @@
+/* Global Styles */
+.myteam-page {
+    font-family: Arial, sans-serif !important;
+    text-align: center !important;
+    margin: 20px !important;
+    background-color:  #1a1154;
+  }
+  
+  /* Role Selection */
+  .myteam-role-selection {
+    display: inline-flex !important; /* Align fields in a single line */
+    justify-content: space-between !important;
+    margin-bottom: 20px !important;
+    gap: 20px !important; /* Space between fields */
+    width: 100%; /* Ensure the container takes the full width */
+    justify-content: center; /* Center fields horizontally */
+    padding-top: 50px !important; /* Increased space above the fields */
+    
+  }
+  
+  .myteam-role-selection label {
+    font-weight: bold !important;
+    background-color:  #1a1154;
+  }
+  
+  .myteam-role-selection select {
+    padding: 5px !important;
+    margin-left: 10px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+    min-width: 150px !important; /* Ensure select fields have a consistent width */
+    margin-bottom: 15px !important; /* Space below the select field */
+  }
+  
+  /* Button Styles */
+  .myteambutton {
+    padding: 6px 12px !important; /* Smaller button size */
+    background-color: #070707 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    margin-top: 20px !important; /* Add spacing at the top */
+    width: auto !important; /* Set width to auto, which adjusts to content */
+    max-width: 200px !important; /* Limit the maximum width */
+    display: block; /* Ensure the button is displayed as a block */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+  }
+  
+  .myteambutton:hover {
+    background-color: #131313 !important;
+  }
+  
+  /* Final Team Display */
+  .myteam-final-team {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 30px !important; /* Space above the final team section */
+    background-color:  #1a1154;
+    /* No changes to final team layout */
+  }
+  
+  /* Player Row */
+  .myteam-player-row {
+    display: flex !important;
+    flex-direction: row !important; /* Updated to row for horizontal display */
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    margin-bottom: 30px !important;
+  }
+  
+  /* Player Card Styles */
+  .myteam-player-card {
+    background-color: #f8f8f8 !important;
+    padding: 20px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 10px !important;
+    width: 200px !important;
+    text-align: center !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease !important;
+  }
+  
+  .myteam-player-card:hover {
+    transform: translateY(-5px) !important;
+  }
+  
+  /* Player Image Container */
+  .myteam-player-img-container {
+    height: 150px !important;
+    margin-bottom: 10px !important;
+    
+  }
+  
+  .myteam-player-img {
+    max-width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    border-radius: 5px !important;
+  }
+  
+  /* Player Info */
+  .myteam-player-info h3 {
+    font-size: 16px !important;
+    font-weight: bold !important;
+  }
+  
+  /* New Player Container */
+  .myteam-player-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important; /* Align the player cards */
+    gap: 20px !important; /* Ensure proper space between cards */
+    background-color:  #1a1154;
+  }
+  
+  /* Media Query for Responsive Design */
+  @media (max-width: 768px) {
+    .myteam-role-selection {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+  
+    .myteam-player-row {
+      justify-content: center !important;
+      flex-direction: column !important; /* Stack vertically on smaller screens */
+    }
+  
+    .myteam-player-card {
+      width: 180px !important;
+      
+    }
+  }

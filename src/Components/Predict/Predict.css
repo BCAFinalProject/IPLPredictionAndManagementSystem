@@ -1,0 +1,159 @@
+/* Predict.css - Vibrant & Engaging IPL Win Predictor UI */
+
+/* Import Google Font */
+
+/* Main Container */
+.predict-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  width: 100%;
+  margin: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.predict-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.3);
+}
+
+/* Heading */
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #dac5bf;
+  background: linear-gradient(90deg, #ff9800, #dac5bf);
+}
+
+.predict-container h2{
+  color:#0f0c29
+}
+/* Form Labels */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: Georgia, 'Times New Roman', Times, serif;  color: #ffd700;
+  text-transform: uppercase;
+}
+
+/* Input Fields & Dropdowns */
+select, input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffd700;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+select:hover, input:hover, select:focus, input:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+/* Predict Button */
+button {
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff5722, #ff9800);
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+}
+
+/* Error Messages */
+.error {
+  color: #ff4c4c;
+  font-weight: bold;
+  margin-top: 10px;
+  background: rgba(255, 76, 76, 0.1);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* Progress Bar Container */
+.progress-container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin-top: 30px;
+  backdrop-filter: blur(6px);
+}
+
+.progress-container h3 {
+  color: #ffd700;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+/* Progress Bars */
+.progress-bar {
+  height: 30px !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  text-shadow: none !important;
+  border-radius: 8px;
+}
+
+/* Pie Chart */
+.pie-chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .predict-container {
+    width: 90%;
+    padding: 30px;
+  }
+  
+  h2 {
+    font-size: 26px;
+  }
+
+  select, input, button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .progress-container h3 {
+    font-size: 20px;
+  }
+
+  .progress-bar {
+    height: 25px !important;
+    font-size: 14px !important;
+  }
+}
